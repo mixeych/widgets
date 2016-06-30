@@ -77,8 +77,8 @@ class MIXSocialLinks extends WP_Widget {
 				title = preName.replace('[new]', title)
 				link = preName.replace('[new]', link)
 				var row = "<div class='new'><p>Title<input class='widefat' class='new-link title' name='"+title+"' type='text' value=''></p><p>Link<input class='widefat' class='new-link link' name='"+link+"' type='text' value=''><a class='del-social new' href='javascript:void(0)'>del</a></p></div>";
-				jQuery(".social-form").append(row);
-				jQuery(".social-form p:last-child").children(".del-social").click(removeSocial);
+				jQuery(this).siblings(".social-form").append(row);
+                		jQuery(this).siblings(".social-form").find("p:last-child").children(".del-social").click(removeSocial);
 			});
 		</script>
 		<?php 
